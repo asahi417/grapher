@@ -16,6 +16,25 @@ Install via pip
 pip install kex
 ```
 
+## Reproduce Analysis of LexSpec Paper 
+Here we explain to reproduce the result described in the paper **Back to the Basics: A Quantitative Analysis of Statistical and Graph-Based Term Weighting Schemes for Keyword Extraction**.
+
+- Run benchmark: MRR/P@k metric for each combination of algorithm and dataset. 
+```shell script
+python ./examples/paper_lex_spec/benchmark.py
+```
+
+- Get average run time as a proxy for algorithm's complexity measure (note that the run-time depends on environment).
+```shell script
+python ./examples/paper_lex_spec/complexity.py
+```
+
+- High level statistics for each data.
+```shell script
+python ./examples/paper_lex_spec/data_statistics_table.py
+```
+
+
 ## Extract Keywords with Kex
 Built-in algorithms in *kex* is below:
 - `FirstN`: heuristic baseline to pick up first n phrases as keywords 
